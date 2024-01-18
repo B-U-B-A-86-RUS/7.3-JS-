@@ -4,7 +4,8 @@
   "description": "jest test",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "coverage": "jest --collectCoverage"
   },
   "keywords": [
     "jest",
@@ -22,10 +23,5 @@
   "dependencies": {
     "eslint": "^8.56.0",
     "prettier": "^3.2.3"
-  },
-  "coverageThreshold": {
-    "branches": 100,
-    "functions": 100,
-    "lines": 100
   }
 }
