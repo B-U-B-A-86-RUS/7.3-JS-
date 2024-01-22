@@ -2,9 +2,6 @@ const { test, expect, chromium } = require("@playwright/test");
 const user = require("../user");
 
 test("test", async ({ page }) => {
-  const browser = await chromium.launch({
-    headless: false,
-  });
   await page.goto("https://netology.ru/?modal=sign_in");
   await page.locator('[placeholder="Email"]').click();
   await page.locator('[placeholder="Email"]').fill(user.email);
@@ -19,9 +16,6 @@ test("test", async ({ page }) => {
 });
 
 test("not a valid test", async ({ page }) => {
-  const browser = await chromium.launch({
-    headless: false,
-  });
   await page.goto("https://netology.ru/?modal=sign_in");
   await page.locator('[placeholder="Email"]').click();
   await page.locator('[placeholder="Email"]').fill("test@mail.ru");
